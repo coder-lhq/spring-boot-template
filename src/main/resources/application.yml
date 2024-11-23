@@ -1,0 +1,22 @@
+server:
+  port: 8086
+
+spring:
+  datasource:
+    # 德鲁伊连接池连接数据库
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/review?serverTimezone=UTC
+      username: root
+      password: Mysql123.
+
+mybatis-plus:
+  global-config:
+    db-config:
+      # 表前缀
+      table-prefix: tbl_
+      # 使用数据库id自增模式
+      id-type: auto
+  configuration:
+    # 开启 MyBatisPlus 的日志，在控制台输出，开发是开启，生产环境关闭掉
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
